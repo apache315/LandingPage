@@ -19,25 +19,27 @@ document.addEventListener('DOMContentLoaded', () => {
             // Google Apps Script expects form data, not JSON for this implementation
 
             try {
-                // Check removed
+                // Convert FormData to URL params for Google Apps Script
+                const params = new URLSearchParams();
+                for (const [key, value] of formData) {
+                    params.append(key, value);
+                }
 
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
-                    body: formData
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: params.toString()
                 });
 
-                const result = await response.json();
-
-                if (result.result === 'success') {
-                    console.log('Form submitted successfully');
-                    // Show success message
-                    formMessage.textContent = "Thanks for your interest! We've added you to the list.";
-                    formMessage.className = 'form-message success';
-                    formMessage.classList.remove('hidden');
-                    betaForm.reset();
-                } else {
-                    throw new Error(result.error || 'Submission failed');
-                }
+                // With no-cors we can't read the response, so assume success
+                console.log('Form submitted');
+                formMessage.textContent = "Thanks for your interest! We've added you to the list.";
+                formMessage.className = 'form-message success';
+                formMessage.classList.remove('hidden');
+                betaForm.reset();
 
             } catch (error) {
                 console.error('Error:', error);
