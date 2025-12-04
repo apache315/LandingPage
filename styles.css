@@ -136,7 +136,8 @@ h3 {
     max-width: 100%;
     height: auto;
     filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.1));
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%);
 }
 
 /* Features Grid */
