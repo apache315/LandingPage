@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnText = document.querySelector('.btn-text');
 
     // REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4vc4JDjPHbgTqXglvgtE-ZFQNGi_EhaI_g_X_SUbfBYdbCSZW_ue7J2lDjt56HNsuqg/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzJbBLhq_8_N4rS5a6pWhugkxvRMTxBZbMxFfDVhghwidMemA2rNzBzc3A0469PZOBK/exec';
 
     if (betaForm) {
         betaForm.addEventListener('submit', async (e) => {
