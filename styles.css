@@ -290,31 +290,73 @@ h3 {
     color: #ef4444;
 }
 
-/* Responsive Design */
+/* Responsive Design - Tablet */
 @media (max-width: 968px) {
     .hero {
         flex-direction: column;
         text-align: center;
         padding-top: 2rem;
+        min-height: auto;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.15;
     }
 
     .hero-subtitle {
         margin: 0 auto 2rem;
+        font-size: 1.1rem;
     }
 
     .hero-image-container {
         width: 100%;
         justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .hero-image {
+        max-width: 90%;
+    }
+
+    .features-grid {
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .feature-card {
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .credibility-section {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .credibility-text {
+        font-size: 0.85rem;
     }
 
     .beta-container {
         flex-direction: column;
         align-items: stretch;
         text-align: center;
+        padding: 1.5rem;
+    }
+
+    .beta-title {
+        font-size: 1.3rem;
+    }
+
+    .beta-subtitle {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
     }
 
     .beta-form {
@@ -326,9 +368,52 @@ h3 {
     }
 }
 
+/* Responsive Design - Mobile */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding-top: 1.5rem;
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+
+    .beta-title {
+        font-size: 1.2rem;
+    }
+
+    .beta-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .form-input {
+        padding: 0.7rem 0.8rem;
     }
 }
 
