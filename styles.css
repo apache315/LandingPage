@@ -145,7 +145,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
 .feature-card {
@@ -169,6 +169,22 @@ h3 {
     line-height: 1.6;
 }
 
+/* Credibility Section */
+.credibility-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.credibility-text {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* Beta Access Form */
 .beta-section {
     margin-bottom: 4rem;
@@ -190,6 +206,14 @@ h3 {
 .beta-title {
     font-size: 1.5rem;
     flex-shrink: 0;
+}
+
+.beta-subtitle {
+    color: var(--accent-cyan);
+    font-size: 1rem;
+    font-weight: 500;
+    flex-basis: 100%;
+    margin-top: -0.5rem;
 }
 
 .beta-form {
@@ -245,6 +269,27 @@ h3 {
     display: none;
 }
 
+/* Form Message */
+.form-message {
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    flex-basis: 100%;
+}
+
+.form-message.success {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #10b981;
+}
+
+.form-message.error {
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid rgba(239, 68, 68, 0.5);
+    color: #ef4444;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .hero {
@@ -285,45 +330,6 @@ h3 {
     .hero-title {
         font-size: 2rem;
     }
-}
-
-/* Trusted By Section */
-.trusted-by {
-    text-align: center;
-    margin-bottom: 6rem;
-    padding: 2rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.trusted-label {
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-    font-weight: 600;
-}
-
-.logos-grid {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.logo-item {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: var(--text-secondary);
-    opacity: 0.5;
-    transition: var(--transition);
-    cursor: default;
-}
-
-.logo-item:hover {
-    opacity: 0.8;
-    color: var(--text-primary);
 }
 
 /* Footer */
